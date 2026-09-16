@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сообщения</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="dashboard">
+    <aside class="sidebar">
+        <div class="logo">👤 Мой кабинет</div>
+        <nav>
+            <a href="index.html">Профиль</a>
+            <a href="messages.html" class="active">Сообщения</a>
+            <a href="stats.html">Статистика</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h1 class="page-title">Сообщения</h1>
+
+        <div class="card messages-container">
+            <div class="msg-list">
+                <div class="msg-item in">
+                    <strong>Петров П.:</strong> Привет, как дела с курсачом?
+                    <span class="msg-meta">10:00</span>
+                </div>
+                <div class="msg-item out">
+                    Норм, дописываю бэкенд на Yii2
+                    <span class="msg-meta">10:05</span>
+                </div>
+                <div class="msg-item in">
+                    <strong>Петров П.:</strong> Красавчик! Скинь потом на гитхаб
+                    <span class="msg-meta">10:07</span>
+                </div>
+            </div>
+
+            <form class="send-form">
+                <textarea placeholder="Введите сообщение..." rows="2" required></textarea>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </div>
+    </main>
+</div>
+</body>
+</html>
