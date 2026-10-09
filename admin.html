@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="admin-container">
+    <header class="admin-header">
+        <div>
+            <h1>Панель администратора</h1>
+            <p>Управление пользователями и сообщениями</p>
+        </div>
+        <a href="index.html" class="back-link">← На главную</a>
+    </header>
+    <!-- Статистика -->
+    <section class="admin-card">
+        <h2>Статистика</h2>
+        <p>Всего пользователей: —</p>
+        <p>Пользователей онлайн: —</p>
+        <p>Сообщений за последние 24 часа: —</p>
+        <p class="placeholder">Данные пока не подключены.</p>
+    </section>
+    <!-- Пользователи -->
+    <section class="admin-card">
+        <h2>Пользователи</h2>
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Логин</th>
+                    <th>ФИО</th>
+                    <th>Телефон</th>
+                    <th>Статус</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td><span class="status">Не подключено</span></td>
+                    <td>
+                        <button type="button" class="admin-btn">
+                            Изменить
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="placeholder">
+            Данные пользователей пока не загружаются.
+        </p>
+    </section>
+    <!-- Сообщения -->
+    <section class="admin-card">
+        <h2>Сообщения за последние 24 часа</h2>
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Отправитель</th>
+                    <th>Получатель</th>
+                    <th>Сообщение</th>
+                    <th>Дата и время</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>Сообщений пока нет</td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- Управление аккаунтами -->
+    <section class="admin-card">
+        <h2>Управление аккаунтами</h2>
+        <p>
+            Здесь можно будет редактировать данные пользователей
+            и изменять пароли.
+        </p>
+        <button type="button" class="admin-btn">
+            Добавить пользователя
+        </button>
+        <button type="button" class="admin-btn">
+            Изменить пароль
+        </button>
+        <button type="button" class="admin-btn">
+            Редактировать данные
+        </button>
+        <p class="placeholder">
+            Кнопки пока не работают.
+        </p>
+    </section>
+</div>
+</body>
+</html>

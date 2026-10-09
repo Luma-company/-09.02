@@ -1,46 +1,118 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <title>Сообщения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мессенджер — Сообщения</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/messages.css">
 </head>
+
 <body>
-<div class="dashboard">
-    <aside class="sidebar">
-        <div class="logo">👤 Мой кабинет</div>
-        <nav>
-            <a href="index.html">Профиль</a>
-            <a href="messages.html" class="active">Сообщения</a>
-            <a href="stats.html">Статистика</a>
-        </nav>
-    </aside>
 
-    <main class="content">
-        <h1 class="page-title">Сообщения</h1>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo">Messenger</div>
 
-        <div class="card messages-container">
-            <div class="msg-list">
-                <div class="msg-item in">
-                    <strong>Петров П.:</strong> Привет, как дела с курсачом?
-                    <span class="msg-meta">10:00</span>
-                </div>
-                <div class="msg-item out">
-                    Норм, дописываю бэкенд на Yii2
-                    <span class="msg-meta">10:05</span>
-                </div>
-                <div class="msg-item in">
-                    <strong>Петров П.:</strong> Красавчик! Скинь потом на гитхаб
-                    <span class="msg-meta">10:07</span>
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">👤 Профиль</a>
+                <a href="massages.html" class="nav-link active">💬 Сообщения</a>
+                <a href="stats.html" class="nav-link">📊 Статистика</a>
+                <a href="admin.html" class="nav-link admin-link">🛠 Панель администратора</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <span class="avatar">ИИ</span>
+                <div>
+                    <strong>Иван Иванов</strong>
+                    <small>Пользователь</small>
                 </div>
             </div>
+        </aside>
 
-            <form class="send-form">
-                <textarea placeholder="Введите сообщение..." rows="2" required></textarea>
-                <button type="submit" class="btn">Отправить</button>
-            </form>
-        </div>
-    </main>
-</div>
+        <main class="main-content messages-content">
+            <header class="page-header">
+                <div>
+                    <h1>Сообщения</h1>
+                    <p>Твоя переписка</p>
+                </div>
+                <a href="admin.html" class="admin-button">Панель администратора</a>
+            </header>
+
+            <section class="chat-layout">
+                <aside class="contacts">
+                    <h2>Чаты</h2>
+
+                    <div class="contact active-contact">
+                        <div class="contact-avatar blue">АП</div>
+                        <div class="contact-info">
+                            <strong>Алексей Петров</strong>
+                            <p>Привет! Как дела?</p>
+                        </div>
+                        <span class="contact-time">12:40</span>
+                    </div>
+
+                    <div class="contact">
+                        <div class="contact-avatar purple">МС</div>
+                        <div class="contact-info">
+                            <strong>Мария Смирнова</strong>
+                            <p>Хорошо, спасибо!</p>
+                        </div>
+                        <span class="contact-time">Вчера</span>
+                    </div>
+
+                    <div class="contact">
+                        <div class="contact-avatar orange">ДК</div>
+                        <div class="contact-info">
+                            <strong>Дмитрий Козлов</strong>
+                            <p>До встречи!</p>
+                        </div>
+                        <span class="contact-time">Пн</span>
+                    </div>
+                </aside>
+
+                <section class="chat-window">
+                    <header class="chat-header">
+                        <div class="contact-avatar blue">АП</div>
+                        <div>
+                            <strong>Алексей Петров</strong>
+                            <p><span class="online-dot"></span> Был недавно</p>
+                        </div>
+                    </header>
+
+                    <div class="chat-messages">
+                        <div class="message received">
+                            <p>Привет! Как дела?</p>
+                            <span>12:35</span>
+                        </div>
+
+                        <div class="message sent">
+                            <p>Привет! Всё отлично, спасибо. А у тебя?</p>
+                            <span>12:37</span>
+                        </div>
+
+                        <div class="message received">
+                            <p>Тоже всё хорошо! Как проходит учёба?</p>
+                            <span>12:39</span>
+                        </div>
+
+                        <div class="message sent">
+                            <p>Всё нормально, работаю над проектом мессенджера.</p>
+                            <span>12:40</span>
+                        </div>
+                    </div>
+
+                    <form class="message-form">
+                        <input type="text" placeholder="Написать сообщение..." aria-label="Сообщение">
+                        <button type="button">Отправить ➤</button>
+                    </form>
+                    <p class="demo-note">Демонстрационная переписка. Отправка пока не работает.</p>
+                </section>
+            </section>
+        </main>
+    </div>
+
 </body>
+
 </html>

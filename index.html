@@ -2,58 +2,120 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Личный кабинет</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мессенджер — Профиль</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="dashboard">
+
+<div class="app">
     <aside class="sidebar">
-        <div class="logo">👤 Мой кабинет</div>
-        <nav>
-            <a href="index.html" class="active">Профиль</a>
-            <a href="messages.html">Сообщения</a>
-            <a href="stats.html">Статистика</a>
+        <div class="logo">Messenger</div>
+
+        <nav class="navigation">
+            <a href="index.html" class="nav-link active">👤 Профиль</a>
+            <a href="massages.html" class="nav-link">💬 Сообщения</a>
+            <a href="stats.html" class="nav-link">📊 Статистика</a>
+            <a href="admin.html" class="nav-link admin-link">🛠 Панель администратора</a>
         </nav>
+
+        <div class="sidebar-bottom">
+            <span class="avatar">ИИ</span>
+            <div>
+                <strong>Иван Иванов</strong>
+                <small>Пользователь</small>
+            </div>
+        </div>
     </aside>
 
-    <main class="content">
-        <h1 class="page-title">Личный кабинет</h1>
-
-        <div class="card">
-            <div class="profile-header">
-                <div class="avatar">ИИ</div>
-                <div class="profile-info">
-                    <h2>Иванов Иван</h2>
-                    <p>📧 ivan@example.com</p>
-                    <p>📱 +7 (999) 123-45-67</p>
-                </div>
+    <main class="main-content">
+        <header class="page-header">
+            <div>
+                <h1>Мой профиль</h1>
+                <p>Управление личными данными</p>
             </div>
-        </div>
+            <span class="online-badge">● Онлайн</span>
+        </header>
 
-        <div class="card">
-            <h3>Редактировать данные</h3>
-            <div class="info-grid">
+        <section class="welcome-card">
+            <div class="large-avatar">ИИ</div>
+            <div>
+                <h2>Добро пожаловать, Иван!</h2>
+                <p>Это твой личный кабинет в мессенджере.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <div>
+                    <h2>Личные данные</h2>
+                    <p>Информация о твоём аккаунте</p>
+                </div>
+                <button class="button" type="button">Редактировать</button>
+            </div>
+
+            <div class="profile-grid">
                 <div class="field">
                     <label>Имя</label>
-                    <input type="text" value="Иван">
+                    <div class="field-value">Иван</div>
                 </div>
+
                 <div class="field">
                     <label>Фамилия</label>
-                    <input type="text" value="Иванов">
+                    <div class="field-value">Иванов</div>
                 </div>
+
                 <div class="field">
-                    <label>Email</label>
-                    <input type="email" value="ivan@example.com">
+                    <label>Логин</label>
+                    <div class="field-value">ivan</div>
                 </div>
+
+                <div class="field">
+                    <label>Электронная почта</label>
+                    <div class="field-value">ivan@example.com</div>
+                </div>
+
                 <div class="field">
                     <label>Телефон</label>
-                    <input type="tel" value="+79991234567">
+                    <div class="field-value">+7 (999) 123-45-67</div>
+                </div>
+
+                <div class="field">
+                    <label>ID пользователя</label>
+                    <div class="field-value">1001</div>
                 </div>
             </div>
-            <br>
-            <button class="btn">Сохранить</button>
-        </div>
+        </section>
+
+        <section class="card">
+            <h2>Быстрый доступ</h2>
+
+            <div class="quick-links">
+                <a href="messages.html" class="quick-card">
+                    <span class="quick-icon">💬</span>
+                    <strong>Мои сообщения</strong>
+                    <span>Перейти к переписке →</span>
+                </a>
+
+                <a href="stats.html" class="quick-card">
+                    <span class="quick-icon">📊</span>
+                    <strong>Статистика</strong>
+                    <span>Посмотреть показатели →</span>
+                </a>
+
+                <a href="admin.html" class="quick-card">
+                    <span class="quick-icon">🛠</span>
+                    <strong>Администрирование</strong>
+                    <span>Открыть панель →</span>
+                </a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            Учебный проект «Messenger» · 2026
+        </footer>
     </main>
 </div>
+
 </body>
 </html>

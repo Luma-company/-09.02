@@ -2,44 +2,126 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Статистика</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мессенджер — Статистика</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stats.css">
 </head>
 <body>
-<div class="dashboard">
+
+<div class="app">
     <aside class="sidebar">
-        <div class="logo">👤 Мой кабинет</div>
-        <nav>
-            <a href="index.html">Профиль</a>
-            <a href="messages.html">Сообщения</a>
-            <a href="stats.html" class="active">Статистика</a>
+        <div class="logo">Messenger</div>
+
+        <nav class="navigation">
+            <a href="index.html" class="nav-link">👤 Профиль</a>
+            <a href="massages.html" class="nav-link">💬 Сообщения</a>
+            <a href="stats.html" class="nav-link active">📊 Статистика</a>
+            <a href="admin.html" class="nav-link admin-link">🛠 Панель администратора</a>
         </nav>
+
+        <div class="sidebar-bottom">
+            <span class="avatar">ИИ</span>
+            <div>
+                <strong>Иван Иванов</strong>
+                <small>Пользователь</small>
+            </div>
+        </div>
     </aside>
 
-    <main class="content">
-        <h1 class="page-title">Моя статистика</h1>
+    <main class="main-content">
+        <header class="page-header">
+            <div>
+                <h1>Статистика</h1>
+                <p>Обзор активности в мессенджере</p>
+            </div>
 
-        <div class="stats-grid">
-            <div class="card stat-card">
-                <h3>Отправлено</h3>
-                <div class="number">42</div>
-            </div>
-            <div class="card stat-card">
-                <h3>Получено</h3>
-                <div class="number">58</div>
-            </div>
-            <div class="card stat-card">
-                <h3>Всего</h3>
-                <div class="number">100</div>
-            </div>
-        </div>
+            <a href="admin.html" class="stats-admin-button">
+                Панель администратора
+            </a>
+        </header>
 
-        <div class="card">
-            <h3>Последняя активность</h3>
-            <p>Последний вход: <strong>16.09.2026, 14:30</strong></p>
-            <p>Последнее сообщение: <strong>5 минут назад</strong></p>
-        </div>
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon sent-icon">↗</div>
+                <p>Отправлено сообщений</p>
+                <h2>42</h2>
+                <span>За всё время</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon received-icon">↙</div>
+                <p>Получено сообщений</p>
+                <h2>58</h2>
+                <span>За всё время</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon total-icon">✉</div>
+                <p>Всего сообщений</p>
+                <h2>100</h2>
+                <span>Общее количество</span>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Активность аккаунта</h2>
+
+            <div class="activity-row">
+                <div>
+                    <strong>Последний вход</strong>
+                    <p>Дата последнего посещения</p>
+                </div>
+                <span class="activity-value">08.10.2026, 10:30</span>
+            </div>
+
+            <div class="activity-row">
+                <div>
+                    <strong>Последнее сообщение</strong>
+                    <p>Время отправки сообщения</p>
+                </div>
+                <span class="activity-value">08.10.2026, 12:40</span>
+            </div>
+
+            <div class="activity-row">
+                <div>
+                    <strong>Статус аккаунта</strong>
+                    <p>Текущий статус пользователя</p>
+                </div>
+                <span class="account-status">Активен</span>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Соотношение сообщений</h2>
+
+            <div class="bar-label">
+                <span>Отправленные</span>
+                <strong>42%</strong>
+            </div>
+            <div class="progress">
+                <div class="progress-fill sent-fill"></div>
+            </div>
+
+            <div class="bar-label">
+                <span>Полученные</span>
+                <strong>58%</strong>
+            </div>
+            <div class="progress">
+                <div class="progress-fill received-fill"></div>
+            </div>
+
+            <p class="stats-note">
+                Показатели приведены для демонстрации интерфейса
+                и пока не рассчитываются автоматически.
+            </p>
+        </section>
+
+        <footer class="footer">
+            Учебный проект «Messenger» · 2026
+        </footer>
     </main>
 </div>
+
 </body>
 </html>
